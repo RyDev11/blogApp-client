@@ -1,0 +1,710 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    background-color: #0B0C10; /* Dark Background */
+    color: #C5C6C7; /* Light Gray Text */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Headers */
+h1, h2, h3 {
+    color: #66FCF1; /* Cyan Accent for Headers */
+}
+
+/* Links */
+a {
+    color: #66FCF1;
+    text-decoration: none;
+}
+a:hover {
+    color: #45A29E; /* Teal Accent on Hover */
+}
+
+/* Buttons */
+button, .banner-button {
+    background-color: #45A29E; /* Teal for Buttons */
+    color: #C5C6C7;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+button:hover, .banner-button:hover {
+    background-color: #66FCF1; /* Cyan on Hover */
+    color: #0B0C10; /* Dark Text on Hover */
+}
+button:focus, .banner-button:focus {
+    outline: none; /* Removing outline on focus */
+    box-shadow: 0 0 5px 2px rgba(102, 252, 241, 0.8); /* Cyan glow on focus */
+}
+
+/* Section Background */
+section {
+    background-color: #1F2833; /* Secondary Dark Background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Blog Post */
+.blog-post {
+    background-color: #1F2833; /* Dark Background for Posts */
+    color: #C5C6C7;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.blog-post h2 {
+    color: #66FCF1; /* Cyan Title for Posts */
+}
+
+/* Footer */
+footer {
+    background-color: #0B0C10;
+    color: #C5C6C7;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Custom Navbar Styles */
+.custom-navbar {
+    background-color: #1F2833; /* Dark Gray Background for Navbar */
+    border-bottom: 1px solid #282C34; /* Subtle Border Below */
+}
+
+.custom-navbar .navbar-brand {
+    color: #66FCF1 !important; /* Cyan for Brand Name */
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.custom-navbar .navbar-toggler {
+    border-color: #66FCF1; /* Cyan Border for Toggler */
+}
+
+.custom-navbar .navbar-toggler-icon {
+    background-color: #66FCF1; /* Cyan Toggler Icon */
+}
+
+.custom-navbar .navbar-nav .nav-link {
+    color: #C5C6C7 !important; /* Light Gray Text for Links */
+    font-size: 1.1rem;
+    padding: 10px 15px;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover {
+    color: #45A29E !important; /* Teal on Hover */
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.custom-navbar .navbar-nav .nav-link.active {
+    color: #66FCF1 !important; /* Active Link with Cyan Color */
+    font-weight: bold;
+}
+
+/* Styling for Login, Register, Logout links */
+.custom-navbar .navbar-nav .nav-link:nth-child(4), 
+.custom-navbar .navbar-nav .nav-link:nth-child(5) {
+    background-color: #45A29E; /* Teal for Buttons */
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.custom-navbar .navbar-nav .nav-link:nth-child(4):hover, 
+.custom-navbar .navbar-nav .nav-link:nth-child(5):hover {
+    background-color: #66FCF1; /* Cyan on Hover for Buttons */
+}
+
+/* For Small Screens */
+@media (max-width: 991px) {
+    .custom-navbar .navbar-nav {
+        margin-top: 15px;
+    }
+}
+
+/* Banner Component Styles */
+.banner-container {
+    background-color: #66FCF1; /* Cyan Background */
+    color: #0B0C10; /* Dark Text for Contrast */
+    padding: 60px 0; /* Adequate padding for spacing */
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.banner-container h1 {
+    color: #0B0C10; /* Dark Text for Title */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.banner-container p {
+    color: #1F2833; /* Dark Secondary Background Color for Text */
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Banner Button */
+.banner-button {
+    background-color: #45A29E; /* Teal for Button */
+    color: #C5C6C7; /* Light Gray Text on Button */
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.banner-button:hover {
+    background-color: #66FCF1; /* Cyan Hover Effect */
+    color: #0B0C10; /* Dark Text on Hover */
+}
+
+/* For Small Screens */
+@media (max-width: 767px) {
+    .banner-container {
+        padding: 40px 0; /* Adjust padding for smaller screens */
+    }
+
+    .banner-container h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    .banner-container p {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .banner-button {
+        font-size: 1rem; /* Adjust button font size */
+        padding: 10px 25px; /* Adjust button padding */
+    }
+}
+
+/* Blog Post Grid Adjustments */
+.row {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+}
+
+/* Blog Post Cards */
+.blog-post-card {
+    background-color: #1F2833; /* Dark background for posts */
+    color: #C5C6C7;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.blog-post-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.blog-post-card h3 {
+    color: #66FCF1; /* Cyan color for post titles */
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.blog-post-card p {
+    color: #C5C6C7; /* Light gray text for post content */
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Blog Post Card Button */
+.blog-post-card .btn {
+    background-color: #45A29E; /* Teal button */
+    color: #C5C6C7;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.blog-post-card .btn:hover {
+    background-color: #66FCF1; /* Cyan on Hover */
+    color: #0B0C10; /* Dark Text */
+}
+
+/* Add Blog Post Page */
+.add-blog-container {
+    background-color: #1F2833; /* Dark Background for Form Container */
+    color: #C5C6C7; /* Light Gray Text */
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.add-blog-container h1 {
+    color: #66FCF1; /* Cyan Color for Heading */
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.add-blog-container .form-label {
+    color: #C5C6C7; /* Light Gray for Labels */
+    font-size: 1.1rem;
+}
+
+.add-blog-container .form-control {
+    background-color: #FFFFFF; /* White Background for Inputs */
+    border: 1px solid #66FCF1; /* Cyan Border for Inputs */
+    color: #0B0C10; /* Dark Text for Input */
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.add-blog-container .form-control:focus {
+    background-color: #FFFFFF; /* Keep white background on focus */
+    border-color: #45A29E; /* Teal Border on Focus */
+    color: #0B0C10; /* Dark Text */
+    box-shadow: 0 0 5px 2px rgba(69, 162, 158, 0.8); /* Teal Glow on Focus */
+}
+
+.add-blog-container .form-text {
+    color: #45A29E; /* Teal for Help Text */
+}
+
+.add-blog-container .btn {
+    background-color: #45A29E; /* Teal Button Color */
+    color: #C5C6C7;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.add-blog-container .btn:hover {
+    background-color: #66FCF1; /* Cyan on Hover */
+    color: #0B0C10; /* Dark Text on Hover */
+}
+
+.add-blog-container .btn-secondary {
+    background-color: #282C34; /* Dark Background for Cancel Button */
+    color: #C5C6C7;
+}
+
+.add-blog-container .btn-secondary:hover {
+    background-color: #66FCF1; /* Cyan on Hover for Cancel Button */
+    color: #0B0C10; /* Dark Text */
+}
+
+/* For Smaller Screens */
+@media (max-width: 767px) {
+    .add-blog-container {
+        padding: 20px;
+    }
+
+    .add-blog-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .add-blog-container .form-control {
+        font-size: 1rem;
+    }
+
+    .add-blog-container .btn {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+}
+
+/* Login & Register Page Styles */
+.auth-container {
+    background-color: #1F2833; /* Dark Background for Auth Containers */
+    color: #C5C6C7; /* Light Gray Text */
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 500px; /* Adjusted width for wider Register form */
+    margin: 0 auto;
+}
+
+
+.auth-container h1 {
+    color: #66FCF1; /* Cyan Color for Heading */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.auth-container .form-label {
+    color: #C5C6C7; /* Light Gray for Labels */
+}
+
+.auth-container .form-control {
+    background-color: #FFFFFF; /* White Background for Inputs */
+    border: 1px solid #66FCF1; /* Cyan Border for Inputs */
+    color: #0B0C10; /* Dark Text for Input */
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.auth-container .form-control:focus {
+    background-color: #FFFFFF; /* Keep white background on focus */
+    border-color: #45A29E; /* Teal Border on Focus */
+    color: #0B0C10; /* Dark Text */
+    box-shadow: 0 0 5px 2px rgba(69, 162, 158, 0.8); /* Teal Glow on Focus */
+}
+
+.auth-container .btn {
+    background-color: #45A29E; /* Teal Button Color */
+    color: #C5C6C7;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.auth-container .btn:hover {
+    background-color: #66FCF1; /* Cyan on Hover */
+    color: #0B0C10; /* Dark Text on Hover */
+}
+
+.auth-container .btn-secondary {
+    background-color: #282C34; /* Dark Background for Cancel Button */
+    color: #C5C6C7;
+}
+
+.auth-container .btn-secondary:hover {
+    background-color: #66FCF1; /* Cyan on Hover for Cancel Button */
+    color: #0B0C10; /* Dark Text */
+}
+
+/* Update Post Page Styles */
+.update-post-container {
+    background-color: #1F2833; /* Dark Background for Post Edit Form */
+    color: #C5C6C7; /* Light Gray Text */
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 700px;  /* Set max-width for a larger form */
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.update-post-container h1 {
+    color: #66FCF1; /* Cyan Accent for Title */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Form Groups */
+.update-post-container .form-label {
+    color: #C5C6C7; /* Light Gray for Labels */
+}
+
+/* Form Controls */
+.update-post-container .form-control {
+    background-color: #FFFFFF; /* White Background for Inputs */
+    border: 1px solid #66FCF1; /* Cyan Border for Inputs */
+    color: #0B0C10; /* Dark Text for Input */
+    font-size: 1.1rem;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Focus State */
+.update-post-container .form-control:focus {
+    border-color: #45A29E; /* Teal Border on Focus */
+    box-shadow: 0 0 5px 2px rgba(69, 162, 158, 0.8); /* Teal Glow on Focus */
+}
+
+/* Buttons */
+.update-post-container .btn {
+    background-color: #45A29E; /* Teal Button Color */
+    color: #C5C6C7;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.update-post-container .btn:hover {
+    background-color: #66FCF1; /* Cyan on Hover */
+    color: #0B0C10; /* Dark Text on Hover */
+}
+
+/* Cancel Button */
+.update-post-container .btn-secondary {
+    background-color: #282C34; /* Dark Background for Cancel Button */
+    color: #C5C6C7;
+}
+
+.update-post-container .btn-secondary:hover {
+    background-color: #66FCF1; /* Cyan on Hover for Cancel Button */
+    color: #0B0C10; /* Dark Text */
+}
+
+/* Admin Dashboard Container */
+.admin-dashboard-container {
+    background-color: #1F2833; /* Dark Background */
+    color: #C5C6C7; /* Light Gray Text */
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.admin-dashboard-container h1 {
+    color: #66FCF1; /* Cyan Accent for Heading */
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.admin-dashboard-container .btn {
+    background-color: #45A29E; /* Teal Button Color */
+    color: #C5C6C7;
+    padding: 12px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+/* Button Hover Effect */
+.admin-dashboard-container .btn:hover {
+    background-color: #66FCF1; /* Cyan on Hover */
+    color: #0B0C10; /* Dark Text */
+}
+
+/* Table Styling */
+.admin-dashboard-container table {
+    width: 100%;
+    margin-top: 30px;
+    background-color: #282C34; /* Dark Background for Table */
+    color: #C5C6C7; /* Light Gray Text */
+    border-radius: 10px;
+}
+
+/* Table Header */
+.admin-dashboard-container th {
+    background-color: #45A29E; /* Teal for Header */
+    color: #0B0C10; /* Dark Text for Header */
+    font-weight: bold;
+}
+
+/* Table Rows */
+.admin-dashboard-container td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Table Row Hover Effect */
+.admin-dashboard-container tr:hover {
+    background-color: #66FCF1; /* Cyan Highlight on Hover */
+    color: #0B0C10; /* Dark Text on Hover */
+}
+
+/* Status Indicators */
+.admin-dashboard-container .text-success {
+    color: #66FCF1; /* Cyan for Published Status */
+}
+
+.admin-dashboard-container .text-danger {
+    color: #F77F00; /* Orange for Draft Status */
+}
+
+/* Action Buttons in Table */
+.admin-dashboard-container .d-flex button {
+    margin-bottom: 5px;
+}
+
+/* Modal Styling */
+.admin-dashboard-container .modal-header {
+    background-color: #0B0C10;
+    color: #C5C6C7;
+}
+
+.admin-dashboard-container .modal-footer {
+    background-color: #1F2833;
+}
+
+.admin-dashboard-container .modal-footer .btn {
+    text-transform: none; /* No Uppercase for Footer Buttons */
+}
+
+.admin-dashboard-container .modal-footer .btn-danger {
+    background-color: #F77F00; /* Orange for Delete Button */
+}
+
+.admin-dashboard-container .modal-footer .btn-secondary {
+    background-color: #45A29E; /* Teal for Cancel Button */
+}
+
+/* Modal Footer Button Hover */
+.admin-dashboard-container .modal-footer .btn:hover {
+    opacity: 0.8;
+}
+
+/* Edit & Delete Buttons */
+.post-view-card .btn-warning,
+.post-view-card .btn-danger {
+    border-radius: 5px; /* Rounded corners for buttons */
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 120px;
+    margin: 10px;
+    border: none;
+}
+
+/* Edit Button */
+.post-view-card .btn-warning {
+    background-color: #45A29E; /* Teal for Edit */
+    color: #C5C6C7; /* Light Gray Text */
+    transition: background-color 0.3s ease;
+}
+
+/* Delete Button */
+.post-view-card .btn-danger {
+    background-color: #45A29E; /* Teal for Delete */
+    color: #C5C6C7; /* Light Gray Text */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Buttons */
+.post-view-card .btn-warning:hover,
+.post-view-card .btn-danger:hover {
+    background-color: #66FCF1; /* Cyan on Hover */
+    color: #0B0C10; /* Dark Text on Hover */
+}
+
+/* Comment Section Styles */
+.comment-section-title {
+    font-size: 1.3rem;
+    color: #66FCF1; /* Cyan Accent for Comment Section Title */
+    font-weight: bold;
+}
+
+.comment-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.comment-item {
+    background-color: #1F2833; /* Dark Background for Comments */
+    color: #C5C6C7; /* Light Gray Text */
+    border-radius: 8px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.comment-item strong {
+    color: #66FCF1; /* Cyan for Comment Author */
+}
+
+
+
+/* Delete Comment Button */
+.delete-comment-btn {
+    background-color: #45A29E; /* Teal for Delete Comment */
+    color: #C5C6C7;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.delete-comment-btn:hover {
+    background-color: #66FCF1; /* Cyan on Hover */
+    color: #0B0C10; /* Dark Text on Hover */
+}
+
+/* Comment Input Styles */
+.comment-input {
+    background-color: #1F2833; /* Dark Background for Input */
+    color: #FFFFFF; /* White Text when typing */
+    border: 1px solid #45A29E; /* Teal Border for Input */
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Focused Input Styles */
+.comment-input:focus {
+    outline: none; /* Remove default focus outline */
+    background-color: #282C34; /* Slightly darker background when focused */
+    border-color: #66FCF1; /* Cyan border when focused */
+    color: #FFFFFF;
+}
+
+/* Placeholder Styles */
+.comment-input::placeholder {
+    color: #C5C6C7; /* Light gray for placeholder text */
+    opacity: 1; /* Ensures the placeholder color is consistent */
+}
+
+
+
+.comment-submit-btn {
+    background-color: #45A29E; /* Teal for Submit Button */
+    color: #C5C6C7;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.comment-submit-btn:hover {
+    background-color: #66FCF1; /* Cyan on Hover */
+    color: #0B0C10; /* Dark Text */
+}
+
+/* Modal Styling */
+.delete-modal .modal-header {
+    background-color: #0B0C10;
+    color: #C5C6C7;
+}
+
+.delete-modal .modal-footer {
+    background-color: #1F2833;
+}
+
+.delete-modal .modal-footer .btn-secondary {
+    background-color: #45A29E; /* Teal for Cancel Button */
+}
+
+.delete-modal .modal-footer .btn-danger {
+    background-color: #45A29E; /* Teal for Delete Button */
+}
+
+.delete-modal .modal-footer .btn:hover {
+    opacity: 0.8;
+}
